@@ -4,16 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import org.springframework.validation.annotation.Validated;
 
 import java.io.Serializable;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Accessors(chain = true)
 public class Dept implements Serializable {
 
-    private Integer deptNo;//主键
+    private long deptNo;//主键
 
     private String dname;//部门名称
 

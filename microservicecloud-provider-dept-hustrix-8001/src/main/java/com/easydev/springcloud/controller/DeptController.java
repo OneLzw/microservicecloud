@@ -25,6 +25,7 @@ public class DeptController {
         return deptService.add(dept);
     }
 
+    //一旦调用服务方式失败并抛出错误信息后，会自动调用@HystrixCommand所标注的fallbackMethod中说声明的方法
     @GetMapping("/get/{id}")
     @HystrixCommand(fallbackMethod = "getFallBackMethod")
     public Dept get(@PathVariable("id") long id) {
@@ -35,9 +36,8 @@ public class DeptController {
         return deptService.get(id);
     }
 
-    public Dept getFallBackMethod () {
-        Dept dept = new Dept();
-        return dept;
+    public Dept getFallBackMethod (@PathVariable("id") long id) {
+        return new Dept().setDeptNo(id).setDb_source("no Db_source").setDname("没有数据");
     }
 
     @GetMapping("/list")

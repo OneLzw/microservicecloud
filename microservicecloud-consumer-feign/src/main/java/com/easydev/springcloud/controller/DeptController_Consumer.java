@@ -20,12 +20,12 @@ public class DeptController_Consumer {
         return deptClientService.add(dept);
     }
 
-    @GetMapping("dept/get/{id}")
+    @GetMapping("/dept/get/{id}")
     public Dept get (@PathVariable("id") long id) {
         return deptClientService.get(id);
     }
 
-    @GetMapping("dept/list")
+    @GetMapping("/dept/list")
     public List<Dept> list () {
         return deptClientService.list();
     }

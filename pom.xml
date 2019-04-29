@@ -108,6 +108,7 @@
         <module>microservicecloud-provider-dept-8003</module>
         <module>microservicecloud-consumer-feign</module>
         <module>microservicecloud-provider-dept-hustrix-8001</module>
+        <module>microservicecloud-consumer-hystrix-dashboard</module>
     </modules>
 
 </project>

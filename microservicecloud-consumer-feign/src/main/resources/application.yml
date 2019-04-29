@@ -8,3 +8,7 @@ eureka:
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #设置与eureka server交互的地址查询服务和注册服务都要依赖这个地址
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
+feign:
+  hystrix:
+    enabled: true
