@@ -13,3 +13,11 @@ eureka:
     instance-id: gateway-9527.com
     prefer-ip-address: true     #访问地址可以显示ip地址
 
+zuul:
+  routes:
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+#  ignored-services: microservicecloud-dept #屏蔽真实服务的名称
+  ignored-services: "*" #屏蔽所有真实服务的名称
+  prefix: /easydev     #加前缀
+
