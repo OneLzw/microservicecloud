@@ -13,6 +13,7 @@ public class Zuul_9527_StartSpringCloudApp {
     private static Logger logger = LoggerFactory.getLogger(Zuul_9527_StartSpringCloudApp.class);
 
     public static void main(String[] args) {
+
         SpringApplication.run(Zuul_9527_StartSpringCloudApp.class , args);
         logger.info("Zuul_9527_StartSpringCloudApp Start Success!");
     }
